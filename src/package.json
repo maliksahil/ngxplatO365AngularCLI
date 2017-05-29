@@ -1,0 +1,8 @@
+{
+    "name": "ngxplato365angularcli",
+    "version": "1.0.0",
+    "build": {
+        "appId": "ngxplatO365AngularCLI",
+        "app-category-type": "ngxplatO365AngularCLI.app.winsmarts.electron"
+    }
+}
