@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>NgxplatO365AngularCLI</title>
+  <base href=".">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <script type="text/javascript">
+    var isCordova = document.URL.indexOf('http://') === -1 && document.URL.indexOf('https://') === -1;
+    var isElectron = window && window.process && window.process.type;
+    if (isElectron) {
+      isCordova = false;
+      isElectron = true;
+      window.electron = require('electron');
+      if (typeof module === 'object') { window.module = module; module = undefined; }
+    }
+  </script>
+</head>
+
+<body>
+  <app-root>Loading...</app-root>
+  <script src="cordova.js"></script>
+<script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+
+</html>
