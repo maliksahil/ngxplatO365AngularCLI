@@ -45,3 +45,6 @@ Thumbs.db
 src/**/*.js
 src/**/*.js.map
 !src/index.js
+
+#cordova
+cordova/node_modules

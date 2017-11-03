@@ -1,18 +1,18 @@
 {
-  "name": "ngxplato365.cordova.app",
-  "version": "1.0.0",
-  "displayName": "ngxplatO365 App",
-  "cordova": {
-    "platforms": [],
-    "plugins": {
-      "cordova-plugin-ms-adal": {},
-      "cordova-plugin-splashscreen": {},
-      "cordova-plugin-whitelist": {}
+    "name": "ngxplato365.cordova.app",
+    "version": "1.0.0",
+    "displayName": "ngxplatO365 App",
+    "cordova": {
+        "platforms": [],
+        "plugins": {
+            "cordova-plugin-ms-adal": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-whitelist": {}
+        }
+    },
+    "dependencies": {
+        "cordova-plugin-ms-adal": "~0.8.0",
+        "cordova-plugin-splashscreen": "~4.0.0",
+        "cordova-plugin-whitelist": "1"
     }
-  },
-  "dependencies": {
-    "cordova-plugin-ms-adal": "~0.8.0",
-    "cordova-plugin-splashscreen": "~4.0.0",
-    "cordova-plugin-whitelist": "1"
-  }
 }

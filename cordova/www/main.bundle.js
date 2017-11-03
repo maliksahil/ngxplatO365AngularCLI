@@ -1,22 +1,323 @@
-webpackJsonp([1,4],{
+webpackJsonp(["main"],{
 
-/***/ 184:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "../../../../../src/$$_gendir lazy recursive":
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__(86);
-
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 
 /***/ }),
 
-/***/ 22:
+/***/ "../../../../../src/app/app.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__authsettings_config__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__XamarinBridge__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__JwtHelper__ = __webpack_require__(96);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var AppComponent = /** @class */ (function () {
+    function AppComponent() {
+    }
+    AppComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-root',
+            template: "\n    <a [routerLink]=\"['']\">About</a> | <a [routerLink]=\"['login']\">Login</a> | <a [routerLink]=\"['status']\">Status</a> <br/>  \n    <router-outlet></router-outlet>"
+        })
+    ], AppComponent);
+    return AppComponent;
+}());
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/app.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export getAuthenticator */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__status_status_component__ = __webpack_require__("../../../../../src/app/status/status.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ngAuth_authenticators_AzureADAuthService__ = __webpack_require__("../../../../../src/app/ngAuth/authenticators/AzureADAuthService.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ngAuth_AuthenticatedHttpService__ = __webpack_require__("../../../../../src/app/ngAuth/AuthenticatedHttpService.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+// #docregion
+
+
+
+
+
+
+
+
+
+
+function getAuthenticator() {
+    return new __WEBPACK_IMPORTED_MODULE_8__ngAuth_authenticators_AzureADAuthService__["a" /* AzureADAuthService */]();
+}
+var AppModule = /** @class */ (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_9__ngAuth_AuthenticatedHttpService__["a" /* AuthenticatedHttpService */],
+                {
+                    provide: __WEBPACK_IMPORTED_MODULE_8__ngAuth_authenticators_AzureADAuthService__["a" /* AzureADAuthService */],
+                    useFactory: getAuthenticator
+                }
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_3__app_routing__["a" /* routing */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* HttpModule */]
+            ],
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_5__home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__login_login_component__["a" /* LoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__status_status_component__["a" /* StatusComponent */]
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/app.routing.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export routes */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return routing; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__status_status_component__ = __webpack_require__("../../../../../src/app/status/status.component.ts");
+
+
+
+
+var routes = [
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_2__home_home_component__["a" /* HomeComponent */] },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_1__login_login_component__["a" /* LoginComponent */] },
+    { path: 'status', component: __WEBPACK_IMPORTED_MODULE_3__status_status_component__["a" /* StatusComponent */] },
+];
+var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* RouterModule */].forRoot(routes);
+//# sourceMappingURL=app.routing.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/authsettings.config.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return serviceConstants; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ngAuth_authenticators_AzureADServiceConstants__ = __webpack_require__("../../../../../src/app/ngAuth/authenticators/AzureADServiceConstants.ts");
+
+var serviceConstants = new __WEBPACK_IMPORTED_MODULE_0__ngAuth_authenticators_AzureADServiceConstants__["a" /* AzureADServiceConstants */]('1c623fa4-c6c8-4903-a6aa-67c5ba9a1535', 'winsmartsdev.onmicrosoft.com', 'http://localhost:4200/login', 'https://graph.windows.net');
+//# sourceMappingURL=authsettings.config.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/home.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var HomeComponent = /** @class */ (function () {
+    function HomeComponent() {
+    }
+    HomeComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            template: "\n        Simple app demonstrates logging into AzureAD and running a command against the Azure AD graph. <br/> \n        Click the login tab to login, and status tab to view your login status.\n        "
+        })
+    ], HomeComponent);
+    return HomeComponent;
+}());
+
+//# sourceMappingURL=home.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/login/login.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngAuth_authenticators_AzureADAuthService__ = __webpack_require__("../../../../../src/app/ngAuth/authenticators/AzureADAuthService.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+var LoginComponent = /** @class */ (function () {
+    function LoginComponent(_authService, _router) {
+        this._authService = _authService;
+        this._router = _router;
+    }
+    LoginComponent.prototype.logIn = function () {
+        // this._authService.logOut('');
+        this._authService.logIn('');
+    };
+    LoginComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            template: "\n        <button (click)='logIn()'>\n            Sign In\n        </button>"
+        }),
+        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_2__ngAuth_authenticators_AzureADAuthService__["a" /* AzureADAuthService */])),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__ngAuth_authenticators_AzureADAuthService__["a" /* AzureADAuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ngAuth_authenticators_AzureADAuthService__["a" /* AzureADAuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _b || Object])
+    ], LoginComponent);
+    return LoginComponent;
+    var _a, _b;
+}());
+
+//# sourceMappingURL=login.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/ngAuth/AuthenticatedHttpService.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthenticatedHttpService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authenticators_AzureADAuthService__ = __webpack_require__("../../../../../src/app/ngAuth/authenticators/AzureADAuthService.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+var AuthenticatedHttpService = /** @class */ (function () {
+    function AuthenticatedHttpService(http, authenticator) {
+        this._authenticator = authenticator;
+        this._http = http;
+    }
+    AuthenticatedHttpService.prototype.createAuthorizationHeader = function (headers) {
+        if (this._authenticator.toString() === 'SessionAuthenticator') {
+            return;
+        }
+        headers.append('Authorization', 'Bearer ' + this._authenticator.getAccessToken());
+    };
+    AuthenticatedHttpService.prototype.get = function (url) {
+        var _this = this;
+        var promise = new Promise(function (resolve, reject) {
+            var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
+            _this._authenticator.getAccessToken().then(function (access_token) {
+                headers.append('Authorization', 'Bearer ' + access_token);
+                var observable = _this._http.get(url, { headers: headers });
+                observable.subscribe(function (res) {
+                    resolve(res.json());
+                }, function (err) {
+                    if (err.status === 401) {
+                        _this._authenticator.logIn();
+                    }
+                    else {
+                        reject(err);
+                    }
+                });
+            });
+        });
+        return promise;
+    };
+    AuthenticatedHttpService.prototype.post = function (url, data) {
+        var _this = this;
+        var promise = new Promise(function (resolve, reject) {
+            var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
+            _this._authenticator.getAccessToken().then(function (access_token) {
+                headers.append('Authorization', 'Bearer ' + access_token);
+                _this._http.post(url, data, {
+                    headers: headers,
+                }).subscribe(function (res) {
+                    resolve(res.json());
+                });
+            });
+        });
+        return promise;
+    };
+    AuthenticatedHttpService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */])), __param(1, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_2__authenticators_AzureADAuthService__["a" /* AzureADAuthService */])),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__authenticators_AzureADAuthService__["a" /* AzureADAuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__authenticators_AzureADAuthService__["a" /* AzureADAuthService */]) === "function" && _b || Object])
+    ], AuthenticatedHttpService);
+    return AuthenticatedHttpService;
+    var _a, _b;
+}());
+
+//# sourceMappingURL=AuthenticatedHttpService.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/ngAuth/authenticators/AzureADAuthService.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AzureADAuthService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__authsettings_config__ = __webpack_require__("../../../../../src/app/authsettings.config.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__XamarinBridge__ = __webpack_require__("../../../../../src/app/ngAuth/authenticators/XamarinBridge/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__JwtHelper__ = __webpack_require__("../../../../../src/app/ngAuth/authenticators/JwtHelper.ts");
 /// <reference path='cordova-plugin-ms-adal.d.ts' />
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -33,7 +334,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var _authenticationContext;
 var _authResult;
-var AzureADAuthService = (function () {
+var AzureADAuthService = /** @class */ (function () {
     function AzureADAuthService() {
         this.params = this.parseQueryString(location.hash);
         if (window.isCordova || window.isElectron || window.isXamarin) {
@@ -260,12 +561,12 @@ var AzureADAuthService = (function () {
         enumerable: true,
         configurable: true
     });
+    AzureADAuthService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], AzureADAuthService);
     return AzureADAuthService;
 }());
-AzureADAuthService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Injectable */])(),
-    __metadata("design:paramtypes", [])
-], AzureADAuthService);
 
 function error(err) {
     console.error(JSON.stringify(err, null, 4));
@@ -274,406 +575,12 @@ function error(err) {
 
 /***/ }),
 
-/***/ 57:
+/***/ "../../../../../src/app/ngAuth/authenticators/AzureADServiceConstants.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var HomeComponent = (function () {
-    function HomeComponent() {
-    }
-    return HomeComponent;
-}());
-HomeComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
-        template: "\n        Simple app demonstrates logging into AzureAD and running a command against the Azure AD graph. <br/> \n        Click the login tab to login, and status tab to view your login status.\n        "
-    })
-], HomeComponent);
-
-//# sourceMappingURL=home.component.js.map
-
-/***/ }),
-
-/***/ 58:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngAuth_authenticators_AzureADAuthService__ = __webpack_require__(22);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
-
-
-
-var LoginComponent = (function () {
-    function LoginComponent(_authService, _router) {
-        this._authService = _authService;
-        this._router = _router;
-    }
-    LoginComponent.prototype.logIn = function () {
-        // this._authService.logOut('');
-        this._authService.logIn('');
-    };
-    return LoginComponent;
-}());
-LoginComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
-        template: "\n        <button (click)='logIn()'>\n            Sign In\n        </button>"
-    }),
-    __param(0, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Inject */])(__WEBPACK_IMPORTED_MODULE_2__ngAuth_authenticators_AzureADAuthService__["a" /* AzureADAuthService */])),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__ngAuth_authenticators_AzureADAuthService__["a" /* AzureADAuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ngAuth_authenticators_AzureADAuthService__["a" /* AzureADAuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _b || Object])
-], LoginComponent);
-
-var _a, _b;
-//# sourceMappingURL=login.component.js.map
-
-/***/ }),
-
-/***/ 59:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__authenticators_AzureADAuthService__ = __webpack_require__(22);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthenticatedHttpService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
-
-
-
-var AuthenticatedHttpService = (function () {
-    function AuthenticatedHttpService(http, authenticator) {
-        this._authenticator = authenticator;
-        this._http = http;
-    }
-    AuthenticatedHttpService.prototype.createAuthorizationHeader = function (headers) {
-        if (this._authenticator.toString() === 'SessionAuthenticator') {
-            return;
-        }
-        headers.append('Authorization', 'Bearer ' + this._authenticator.getAccessToken());
-    };
-    AuthenticatedHttpService.prototype.get = function (url) {
-        var _this = this;
-        var promise = new Promise(function (resolve, reject) {
-            var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]();
-            _this._authenticator.getAccessToken().then(function (access_token) {
-                headers.append('Authorization', 'Bearer ' + access_token);
-                var observable = _this._http.get(url, { headers: headers });
-                observable.subscribe(function (res) {
-                    resolve(res.json());
-                }, function (err) {
-                    if (err.status === 401) {
-                        _this._authenticator.logIn();
-                    }
-                    else {
-                        reject(err);
-                    }
-                });
-            });
-        });
-        return promise;
-    };
-    AuthenticatedHttpService.prototype.post = function (url, data) {
-        var _this = this;
-        var promise = new Promise(function (resolve, reject) {
-            var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Headers */]();
-            _this._authenticator.getAccessToken().then(function (access_token) {
-                headers.append('Authorization', 'Bearer ' + access_token);
-                _this._http.post(url, data, {
-                    headers: headers,
-                }).subscribe(function (res) {
-                    resolve(res.json());
-                });
-            });
-        });
-        return promise;
-    };
-    return AuthenticatedHttpService;
-}());
-AuthenticatedHttpService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Injectable */])(),
-    __param(0, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */])), __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Inject */])(__WEBPACK_IMPORTED_MODULE_2__authenticators_AzureADAuthService__["a" /* AzureADAuthService */])),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__authenticators_AzureADAuthService__["a" /* AzureADAuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__authenticators_AzureADAuthService__["a" /* AzureADAuthService */]) === "function" && _b || Object])
-], AuthenticatedHttpService);
-
-var _a, _b;
-//# sourceMappingURL=AuthenticatedHttpService.js.map
-
-/***/ }),
-
-/***/ 60:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngAuth_AuthenticatedHttpService__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngAuth_authenticators_AzureADAuthService__ = __webpack_require__(22);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StatusComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
-// #docregion
-
-
-
-var StatusComponent = (function () {
-    function StatusComponent(_authService, _authenticatedHttpService) {
-        var _this = this;
-        this._authService = _authService;
-        this._authenticatedHttpService = _authenticatedHttpService;
-        this._userData = { 'intialValue': 'Data will show here once you press RunCommand' };
-        this.currentUserName = '';
-        if (window.isCordova || window.isXamarin) {
-            document.addEventListener('resume', function () {
-                setTimeout(function () {
-                    _this._authService.userName.then(function (userName) { _this.currentUserName = userName; });
-                }, 1000);
-            }, false);
-        }
-        this._authService.userName.then(function (userName) { _this.currentUserName = userName; });
-    }
-    StatusComponent.prototype.logOut = function () {
-        this._authService.logOut('');
-    };
-    StatusComponent.prototype.runCommand = function () {
-        var _this = this;
-        this._authenticatedHttpService.get('https://graph.windows.net/me?api-version=1.6').then(function (results) {
-            _this._userData = results;
-        });
-        // this._authenticatedHttpService.get("https://graph.microsoft.com/v1.0/me/drive/recent").subscribe((results => {
-        //     this._files = results.json().value;
-        // }));
-    };
-    return StatusComponent;
-}());
-StatusComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
-        template: "\n        <div *ngIf=\"currentUserName\">\n                userName: {{currentUserName}}\n                <br/>\n                <button (click)=\"logOut()\">Logout</button>\n                <br/>\n                <button (click)=\"runCommand()\">\n                    Run Command\n                </button>\n                <pre>{{_userData | json}}</pre>\n        </div>\n        <div *ngIf=\"!currentUserName\">\n            User is not signed in.\n        </div>\n        "
-    }),
-    __param(0, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Inject */])(__WEBPACK_IMPORTED_MODULE_2__ngAuth_authenticators_AzureADAuthService__["a" /* AzureADAuthService */])),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__ngAuth_authenticators_AzureADAuthService__["a" /* AzureADAuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ngAuth_authenticators_AzureADAuthService__["a" /* AzureADAuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__ngAuth_AuthenticatedHttpService__["a" /* AuthenticatedHttpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ngAuth_AuthenticatedHttpService__["a" /* AuthenticatedHttpService */]) === "function" && _b || Object])
-], StatusComponent);
-
-var _a, _b;
-//# sourceMappingURL=status.component.js.map
-
-/***/ }),
-
-/***/ 85:
-/***/ (function(module, exports) {
-
-function webpackEmptyContext(req) {
-	throw new Error("Cannot find module '" + req + "'.");
-}
-webpackEmptyContext.keys = function() { return []; };
-webpackEmptyContext.resolve = webpackEmptyContext;
-module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 85;
-
-
-/***/ }),
-
-/***/ 86:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(99);
-
-
-
-
-if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* enableProdMode */])();
-}
-__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
-//# sourceMappingURL=main.js.map
-
-/***/ }),
-
-/***/ 91:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var AppComponent = (function () {
-    function AppComponent() {
-    }
-    return AppComponent;
-}());
-AppComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
-        selector: 'app-root',
-        template: "\n    <a [routerLink]=\"['']\">About</a> | <a [routerLink]=\"['login']\">Login</a> | <a [routerLink]=\"['status']\">Status</a> <br/>  \n    <router-outlet></router-outlet>"
-    })
-], AppComponent);
-
-//# sourceMappingURL=app.component.js.map
-
-/***/ }),
-
-/***/ 92:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_routing__ = __webpack_require__(93);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(91);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__home_home_component__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__login_login_component__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__status_status_component__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ngAuth_authenticators_AzureADAuthService__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ngAuth_AuthenticatedHttpService__ = __webpack_require__(59);
-/* unused harmony export getAuthenticator */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-// #docregion
-
-
-
-
-
-
-
-
-
-
-function getAuthenticator() {
-    return new __WEBPACK_IMPORTED_MODULE_8__ngAuth_authenticators_AzureADAuthService__["a" /* AzureADAuthService */]();
-}
-var AppModule = (function () {
-    function AppModule() {
-    }
-    return AppModule;
-}());
-AppModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* NgModule */])({
-        providers: [
-            __WEBPACK_IMPORTED_MODULE_9__ngAuth_AuthenticatedHttpService__["a" /* AuthenticatedHttpService */],
-            {
-                provide: __WEBPACK_IMPORTED_MODULE_8__ngAuth_authenticators_AzureADAuthService__["a" /* AzureADAuthService */],
-                useFactory: getAuthenticator
-            }
-        ],
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_3__app_routing__["a" /* routing */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* HttpModule */]
-        ],
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_5__home_home_component__["a" /* HomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__login_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__status_status_component__["a" /* StatusComponent */]
-        ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
-    })
-], AppModule);
-
-//# sourceMappingURL=app.module.js.map
-
-/***/ }),
-
-/***/ 93:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_login_component__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home_component__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__status_status_component__ = __webpack_require__(60);
-/* unused harmony export routes */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return routing; });
-
-
-
-
-var routes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_2__home_home_component__["a" /* HomeComponent */] },
-    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_1__login_login_component__["a" /* LoginComponent */] },
-    { path: 'status', component: __WEBPACK_IMPORTED_MODULE_3__status_status_component__["a" /* StatusComponent */] },
-];
-var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* RouterModule */].forRoot(routes);
-//# sourceMappingURL=app.routing.js.map
-
-/***/ }),
-
-/***/ 94:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ngAuth_authenticators_AzureADServiceConstants__ = __webpack_require__(95);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return serviceConstants; });
-
-var serviceConstants = new __WEBPACK_IMPORTED_MODULE_0__ngAuth_authenticators_AzureADServiceConstants__["a" /* AzureADServiceConstants */]('1c623fa4-c6c8-4903-a6aa-67c5ba9a1535', 'winsmartsdev.onmicrosoft.com', 'http://localhost:4200/login', 'https://graph.windows.net');
-//# sourceMappingURL=authsettings.config.js.map
-
-/***/ }),
-
-/***/ 95:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AzureADServiceConstants; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -684,7 +591,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var AzureADServiceConstants = (function () {
+var AzureADServiceConstants = /** @class */ (function () {
     function AzureADServiceConstants(clientID, tenantID, redirectURL, backendUrl, graphResource, isCordova, isElectron) {
         if (graphResource === void 0) { graphResource = 'https://graph.windows.net'; }
         if (isCordova === void 0) { isCordova = false; }
@@ -697,23 +604,23 @@ var AzureADServiceConstants = (function () {
         this.isCordova = isCordova;
         this.isElectron = isElectron;
     }
+    AzureADServiceConstants = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+        __metadata("design:paramtypes", [String, String, String, String, Object, Object, Object])
+    ], AzureADServiceConstants);
     return AzureADServiceConstants;
 }());
-AzureADServiceConstants = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Injectable */])(),
-    __metadata("design:paramtypes", [String, String, String, String, Object, Object, Object])
-], AzureADServiceConstants);
 
 //# sourceMappingURL=AzureADServiceConstants.js.map
 
 /***/ }),
 
-/***/ 96:
+/***/ "../../../../../src/app/ngAuth/authenticators/JwtHelper.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JwtHelper; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -721,7 +628,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var JwtHelper = (function () {
+var JwtHelper = /** @class */ (function () {
     function JwtHelper() {
     }
     JwtHelper.prototype.urlBase64Decode = function (str) {
@@ -756,22 +663,22 @@ var JwtHelper = (function () {
         }
         return JSON.parse(decoded);
     };
+    JwtHelper = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])()
+    ], JwtHelper);
     return JwtHelper;
 }());
-JwtHelper = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Injectable */])()
-], JwtHelper);
 
 //# sourceMappingURL=JwtHelper.js.map
 
 /***/ }),
 
-/***/ 97:
+/***/ "../../../../../src/app/ngAuth/authenticators/XamarinBridge/Authentication.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Authentication; });
-var Authentication = (function () {
+var Authentication = /** @class */ (function () {
     function Authentication() {
     }
     Authentication.Login = function (authority, resourceUri, clientID, returnUri) {
@@ -790,12 +697,12 @@ var Authentication = (function () {
 
 /***/ }),
 
-/***/ 98:
+/***/ "../../../../../src/app/ngAuth/authenticators/XamarinBridge/index.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Authentication__ = __webpack_require__(97);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return XamarinBridge; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Authentication__ = __webpack_require__("../../../../../src/app/ngAuth/authenticators/XamarinBridge/Authentication.ts");
 
 var XamarinBridge = {
     'Authentication': __WEBPACK_IMPORTED_MODULE_0__Authentication__["a" /* Authentication */],
@@ -804,7 +711,74 @@ var XamarinBridge = {
 
 /***/ }),
 
-/***/ 99:
+/***/ "../../../../../src/app/status/status.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StatusComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngAuth_AuthenticatedHttpService__ = __webpack_require__("../../../../../src/app/ngAuth/AuthenticatedHttpService.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngAuth_authenticators_AzureADAuthService__ = __webpack_require__("../../../../../src/app/ngAuth/authenticators/AzureADAuthService.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+// #docregion
+
+
+
+var StatusComponent = /** @class */ (function () {
+    function StatusComponent(_authService, _authenticatedHttpService) {
+        var _this = this;
+        this._authService = _authService;
+        this._authenticatedHttpService = _authenticatedHttpService;
+        this._userData = { 'intialValue': 'Data will show here once you press RunCommand' };
+        this.currentUserName = '';
+        if (window.isCordova || window.isXamarin) {
+            document.addEventListener('resume', function () {
+                setTimeout(function () {
+                    _this._authService.userName.then(function (userName) { _this.currentUserName = userName; });
+                }, 1000);
+            }, false);
+        }
+        this._authService.userName.then(function (userName) { _this.currentUserName = userName; });
+    }
+    StatusComponent.prototype.logOut = function () {
+        this._authService.logOut('');
+    };
+    StatusComponent.prototype.runCommand = function () {
+        var _this = this;
+        this._authenticatedHttpService.get('https://graph.windows.net/me?api-version=1.6').then(function (results) {
+            _this._userData = results;
+        });
+        // this._authenticatedHttpService.get("https://graph.microsoft.com/v1.0/me/drive/recent").subscribe((results => {
+        //     this._files = results.json().value;
+        // }));
+    };
+    StatusComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            template: "\n        <div *ngIf=\"currentUserName\">\n                userName: {{currentUserName}}\n                <br/>\n                <button (click)=\"logOut()\">Logout</button>\n                <br/>\n                <button (click)=\"runCommand()\">\n                    Run Command\n                </button>\n                <pre>{{_userData | json}}</pre>\n        </div>\n        <div *ngIf=\"!currentUserName\">\n            User is not signed in.\n        </div>\n        "
+        }),
+        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_2__ngAuth_authenticators_AzureADAuthService__["a" /* AzureADAuthService */])),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__ngAuth_authenticators_AzureADAuthService__["a" /* AzureADAuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ngAuth_authenticators_AzureADAuthService__["a" /* AzureADAuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__ngAuth_AuthenticatedHttpService__["a" /* AuthenticatedHttpService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ngAuth_AuthenticatedHttpService__["a" /* AuthenticatedHttpService */]) === "function" && _b || Object])
+    ], StatusComponent);
+    return StatusComponent;
+    var _a, _b;
+}());
+
+//# sourceMappingURL=status.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/environments/environment.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -813,13 +787,41 @@ var XamarinBridge = {
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
-// The file contents for the current environment will overwrite these during build.
 var environment = {
     production: false
 };
 //# sourceMappingURL=environment.js.map
 
+/***/ }),
+
+/***/ "../../../../../src/main.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("../../../../../src/app/app.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+
+
+
+
+if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* enableProdMode */])();
+}
+Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 0:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("../../../../../src/main.ts");
+
+
 /***/ })
 
-},[184]);
+},[0]);
 //# sourceMappingURL=main.bundle.js.map

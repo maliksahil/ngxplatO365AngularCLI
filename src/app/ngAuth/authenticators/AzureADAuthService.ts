@@ -211,7 +211,7 @@ export class AzureADAuthService {
     }
 
     public getAccessToken(): Promise<string> {
-        const promise = new Promise((resolve, reject) => {
+        const promise = new Promise<string>((resolve, reject) => {
             if ((<any>window).isXamarin) {
                 XamarinBridge.Authentication.getAccessToken().then(access_token => { resolve(access_token); });
             } else if ((<any>window).isCordova) {
@@ -233,7 +233,7 @@ export class AzureADAuthService {
     }
 
     public get userName(): Promise<string> {
-        const promise = new Promise((resolve, reject) => {
+        const promise = new Promise<string>((resolve, reject) => {
             this.getAccessToken().then(access_token => {
                 const jwtHelper = new JwtHelper();
                 const parsedToken = jwtHelper.decodeToken(access_token);
